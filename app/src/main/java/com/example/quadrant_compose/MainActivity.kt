@@ -1,4 +1,4 @@
-package com.example.composablequadrants
+package com.example.quadrant_compose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -22,14 +22,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.composablequadrants.ui.theme.ComposableQuadrantsTheme
+import androidx.compose.material3.MaterialTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ComposableQuadrantsTheme {
+            MaterialTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     ComposableInfoApp()
                 }
@@ -109,7 +109,7 @@ fun ComposableInfoCard(
 @Preview(showBackground = true)
 @Composable
 fun ComposableInfoAppPreview() {
-    ComposableQuadrantsTheme {
+    MaterialTheme {
         ComposableInfoApp()
     }
 }
