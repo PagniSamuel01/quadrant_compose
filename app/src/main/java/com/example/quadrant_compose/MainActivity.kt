@@ -23,6 +23,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.ui.res.stringResource
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,16 +44,16 @@ fun ComposableInfoApp(modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxSize()) {
         Row(modifier = Modifier.weight(1f).fillMaxWidth()) {
             ComposableInfoCard(
-                title = "Text composable",
-                description = "Displays text and follows the recommended Material Design guidelines.",
+                title = stringResource(R.string.text_composable_title),
+                description = stringResource(R.string.text_composable_description),
                 backgroundColor = Color(0xFFEADDFF),
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight()
             )
             ComposableInfoCard(
-                title = "Image composable",
-                description = "Creates a composable that lays out and draws a given Painter class object.",
+                title = stringResource(R.string.image_composable_title),
+                description = stringResource(R.string.image_composable_description),
                 backgroundColor = Color(0xFFD0BCFF),
                 modifier = Modifier
                     .weight(1f)
@@ -61,16 +62,16 @@ fun ComposableInfoApp(modifier: Modifier = Modifier) {
         }
         Row(modifier = Modifier.weight(1f).fillMaxWidth()) {
             ComposableInfoCard(
-                title = "Row composable",
-                description = "A layout composable that places its children in a horizontal sequence.",
+                title = stringResource(R.string.row_composable_title),
+                description = stringResource(R.string.row_composable_description),
                 backgroundColor = Color(0xFFB69DF8),
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight()
             )
             ComposableInfoCard(
-                title = "Column composable",
-                description = "A layout composable that places its children in a vertical sequence.",
+                title = stringResource(R.string.column_composable_title),
+                description = stringResource(R.string.column_composable_description),
                 backgroundColor = Color(0xFFF6EDFF),
                 modifier = Modifier
                     .weight(1f)
